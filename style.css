@@ -112,7 +112,6 @@ body.dark select {
     transform: translateX(20px);
 }
 
-/
 body.dark .toggle-switch {
     background-color: #4b5563;
 }
@@ -464,7 +463,6 @@ input:focus {
     background-color: #222222;
 }
 
-/
 .main-layout {
     display: flex;
     flex-direction: column;
