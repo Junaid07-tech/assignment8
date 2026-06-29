@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Main Login Card Container -->
+    <div class="login-card" id="">
+        
+        <!-- Header Text -->
+        <div class="login-header">
+            <h1>Welcome Back</h1>
+            <p>Login to FinTrack Pro</p>
+        </div>
+
+        <!-- Login Form Fields -->
+        <form id="loginForm">
+            
+            <!-- Username Input Group -->
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="loginUsername" name="username" required autocomplete="username">
+            </div>
+
+            <!-- Password Input Group -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password"id="loginPassword" name="password" required autocomplete="current-password">
+            </div>
+
+            <!-- Login Action Button -->
+            <button type="submit" class="login-btn">Login</button>
+
+        </form>
+
+        <!-- Footer Link Block -->
+        <div class="login-footer">
+            <p>Don't have an account? <a href="#" id="registerLink">Register here</a></p>
+        </div>
+
+    </div>
+
+    <!-- Main Registration Card Container -->
+    <div class="register-card" style="display: none;">
+        
+        <!-- Header Text -->
+        <div class="register-header">
+            <h1>Create Account</h1>
+            <p>Join FinTrack Pro</p>
+        </div>
+
+        <!-- Registration Form Fields -->
+        <form id="registerForm">
+            
+            <!-- Choose Username Input Group -->
+            <div class="form-group">
+                <label for="username">Choose a Username</label>
+                <input type="text"id="registerUsername" name="username" required autocomplete="username">
+            </div>
+
+            <!-- Password Input Group -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="registerPassword" name="password" required autocomplete="new-password">
+            </div>
+
+            <!-- Register Action Button -->
+            <button type="submit" class="register-btn">Register</button>
+
+        </form>
+
+        <!-- Footer Link Block -->
+        <div class="register-footer">
+            <p>Already have an account? <a href="#" id="loginLink">Login here</a></p>
+        </div>
+
+    </div>
+
+    <!--main ui start here-->
+
+    <div class="dashboard-wrapper"  style="display: none;">
+        
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">FinTrack Pro</span>
+                    <span class="brand-subtitle">Enterprise Finance</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" id="dashboardNav">
+                    <span class="icon-grid"></span> Dashboard
+                </a>
+            </nav>
+
+            <button class="add-transaction-btn">+ Add Transaction</button>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="main-layout">
+            
+            <!-- Top Navbar Header -->
+            <header class="top-navbar">
+                <div class="user-profile">
+                    <!-- Junaid name remove karke khali span diya hai -->
+                    <span class="user-name"></span>
+                    <button class="logout-btn">
+                        <span class="icon-logout"></span> Logout
+                    </button>
+                </div>
+            </header>
+
+            <!-- Main Dashboard Body -->
+            <main class="content-body">
+                  <!-- SETTINGS PAGE -->
+    
+                <h1 class="page-title">Financial Overview</h1>
+                <p class="page-subtitle">Real-time tracking application</p>
+
+                <!-- 4 Top Cards (Current Balance, Income, Expense, Transactions) -->
+                <div class="overview-cards">
+                    <!-- Current Balance -->
+                    <div class="card-item">
+                        <div class="card-icon blue-bg">🏛</div>
+                        <p class="card-label">Current Balance</p>
+                        <h2 class="card-value">$0.00</h2>
+                    </div>
+                    <!-- Total Income -->
+                    <div class="card-item">
+                        <div class="card-icon green-bg">📈</div>
+                        <p class="card-label">Total Income</p>
+                        <h2 class="card-value green-text">$0.00</h2>
+                    </div>
+                    <!-- Total Expense -->
+                    <div class="card-item">
+                        <div class="card-icon red-bg">📉</div>
+                        <p class="card-label">Total Expense</p>
+                        <h2 class="card-value red-text">$0.00</h2>
+                    </div>
+                    <!-- Total Transactions -->
+                    <div class="card-item">
+                        <div class="card-icon dark-blue-bg">💼</div>
+                        <p class="card-label">Total Transactions</p>
+                        <h2 class="card-value">0</h2>
+                    </div>
+                </div>
+
+                <!-- Mid Section (Chart + Preferences) -->
+                <div class="mid-section">
+                    <!-- Cash Flow Analysis (Chart) -->
+                    <div class="chart-container">
+                        <h3>Cash Flow Analysis</h3>
+                        <div class="chart-wrapper">
+                            <canvas id="cashFlowChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Preferences Section -->
+                    <div class="preferences-container">
+                        <h3>Preferences</h3>
+                        <div class="pref-box">
+                            <div class="toggle-group">
+                                <label for="darkModeToggle">Dark Mode</label>
+                                <input type="checkbox" id="darkModeToggle" class="toggle-switch">
+                            </div>
+                            <button class="reset-btn">🗑 Reset All Data</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Section (All Transactions List Placeholder) -->
+                <div class="transactions-container">
+                    <h3>All Transactions</h3>
+                    
+                    <div class="table-filters">
+                        <div class="search-box">
+                            <span class="search-icon"></span>
+                            <input type="text" placeholder="Search transactions...">
+                        </div>
+                        <div class="select-wrapper">
+                            <select id="typeFilter">
+                                <option value="all">All Types</option>
+                                <option value="income">Income</option>
+                                <option value="expense">Expense</option>
+                            </select>
+                        </div>
+                    </div>
+                   
+                    <!-- Table Headers Structure -->
+                    <div class="table-wrapper">
+                        <table class="transactions-table">
+                            <thead>
+                                <tr>
+                                    <th>DATE</th>
+                                    <th>DESCRIPTION</th>
+                                    <th>CATEGORY</th>
+                                    <th>AMOUNT</th>
+                                    <th>ACTIONS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Data rows can be added here dynamically through JS DOM -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+    
+
+    <div class="tx-modal-container" style="display: none;">
+        
+        <!-- Modal Top Header Bar -->
+        <div class="tx-modal-header">
+            <h2>Add Transaction</h2>
+            <!-- Close cross icon button for JS trigger event -->
+            <button type="button" id="closeTxModalBtn" class="tx-modal-close-btn" aria-label="Close">&times;</button>
+        </div>
+
+        <!-- Transaction Content Form -->
+        <form id="addTransactionForm">
+            
+            <!-- Input Row Area: Type Selection -->
+            <div class="tx-form-group">
+                <label for="txModalType">Type</label>
+                <div class="tx-select-wrapper">
+                    <select id="txModalType">
+                        <option value="expense">Expense</option>
+                        <option value="income">Income</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Input Row Area: Description -->
+            <div class="tx-form-group">
+                <label for="txModalDescription">Description</label>
+                <input type="text" id="txModalDescription" placeholder="e.g. Amazon, Salary, Coffee" required>
+            </div>
+
+            <!-- Double Grid Partition Row Layout: Amount & Date -->
+            <div class="tx-form-grid-row">
+                
+                <!-- Inner Amount Field -->
+                <div class="tx-form-group">
+                    <label for="txModalAmount">Amount</label>
+                    <input type="number" id="txModalAmount" placeholder="0.00" step="0.01" min="0" required>
+                </div>
+                
+                <!-- Inner Date Field Picker -->
+                <div class="tx-form-group">
+                    <label for="txModalDate">Date</label>
+                    <!-- Input date element defaults with exact screenshot calendar layout -->
+                    <input type="date" id="txModalDate" value="2026-06-29" required>
+                </div>
+
+            </div>
+
+            <!-- Input Row Area: Category Options -->
+            <div class="tx-form-group">
+                <label for="txModalCategory">Category</label>
+                <div class="tx-select-wrapper">
+                    <select id="txModalCategory" required>
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="food">Food & Dining</option>
+                        <option value="shopping">Shopping</option>
+                        <option value="bills">Bills & Utilities</option>
+                        <option value="entertainment">Entertainment</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Black Action Submit Save Trigger Command Link Button -->
+            <button type="submit" class="tx-modal-submit-btn">Save Transaction</button>
+
+        </form>
+    </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

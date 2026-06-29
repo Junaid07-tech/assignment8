@@ -1,0 +1,859 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+}/* ================= DARK MODE ================= */
+
+body.dark {
+    background: #111827;
+    color: #f3f4f6;
+}
+
+/* panels */
+body.dark .main-layout,
+body.dark .sidebar,
+body.dark .top-navbar,
+body.dark .card-item,
+body.dark .chart-container,
+body.dark .preferences-container,
+body.dark .transactions-container,
+body.dark .profile-card,
+body.dark .tx-modal-container,
+body.dark .login-card,
+body.dark .register-card {
+    background: #1f2937;
+    color: #f3f4f6;
+    border-color: #374151;
+}
+
+/* text */
+body.dark .brand-title,
+body.dark .brand-subtitle,
+body.dark .page-title,
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark label,
+body.dark .user-name,
+body.dark .card-value {
+    color: #ffffff;
+}
+
+body.dark .page-subtitle,
+body.dark .card-label,
+body.dark .nav-item {
+    color: #d1d5db;
+}
+
+/* sidebar hover */
+body.dark .nav-item:hover {
+    background: #374151;
+    color: #fff;
+}
+
+body.dark .nav-item.active {
+    background: #4f46e5;
+    color: white;
+}
+
+/* inputs */
+body.dark input,
+body.dark select {
+    background: #374151;
+    color: white;
+    border-color: #4b5563;
+}
+
+/* ================= TOGGLE SWITCH FIX ================= */
+
+.toggle-switch {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 44px;
+    height: 24px;
+    background-color: #cbd5e1;
+    border-radius: 999px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    flex-shrink: 0;
+}
+
+.toggle-switch::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: 0.3s;
+}
+
+.toggle-switch:checked {
+    background-color: #3b82f6;
+}
+
+.toggle-switch:checked::before {
+    transform: translateX(20px);
+}
+
+/* dark mode toggle color fix */
+body.dark .toggle-switch {
+    background-color: #4b5563;
+}
+
+body.dark .toggle-switch:checked {
+    background-color: #6366f1;
+}
+
+body.dark .toggle-switch::before {
+    background-color: #ffffff;
+}
+
+
+body.dark input::placeholder{
+    color: #d1d5db;
+}
+
+body.dark .transactions-table th,
+body.dark .transactions-table td{
+    color: white;
+    border-color: #374151;
+}
+
+body.dark .logout-btn,
+body.dark .save-btn{
+    background: #374151;
+    color: white;
+    border-color: #4b5563;
+}
+
+body.dark .nav-item:hover{
+    background: #374151;
+}
+
+body.dark .search-box input{
+    background: #374151;
+}
+
+body.dark .tx-modal-close-btn{
+    color: white;
+}
+/* White Form Container Box */
+.login-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 440px;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Clean light shadow overlay wrapper */
+    border: 1px solid #eaeaea;
+}
+
+/* Header Sections Styling blocks */
+.login-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.login-header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.login-card,
+.register-card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-header p {
+    font-size: 14px;
+    color: #444444;
+}
+
+/* Forms Labels and Input Rows controls styles */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111111;
+    margin-bottom: 6px;
+}
+
+/* Form Inputs parameters styling configurations */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    color: #333333;
+    transition: border-color 0.2s ease;
+}
+
+input:focus {
+    border-color: #2563eb; /* Focused blue state configuration frame parameter */
+}
+
+/* Blue Action Control Login execution button styling */
+.login-btn {
+    width: 100%;
+    background-color: #0256be; /* Matched dark royal blue color code */
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    transition: background-color 0.2s ease;
+}
+
+.login-btn:hover {
+    background-color: #014397;
+}
+
+/* Form Footer redirect block section layout styles */
+.login-footer {
+    text-align: center;
+}
+
+.login-footer p {
+    font-size: 13px;
+    color: #333333;
+}
+
+.login-footer a {
+    color: #0256be;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+/* White Form Container Box */
+.register-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 440px;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Clean light shadow overlay wrapper */
+    border: 1px solid #eaeaea;
+}
+
+/* Header Sections Styling blocks */
+.register-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.register-header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.register-header p {
+    font-size: 14px;
+    color: #444444;
+}
+
+/* Forms Labels and Input Rows controls styles */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111111;
+    margin-bottom: 6px;
+}
+
+/* Form Inputs parameters styling configurations */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    color: #333333;
+    transition: border-color 0.2s ease;
+}
+
+input:focus {
+    border-color: #22c55e; /* Focused green state configuration frame parameter */
+}
+
+/* Green Action Control Register execution button styling */
+.register-btn {
+    width: 100%;
+    background-color: #22a842; /* Matched green color code from screen image */
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    transition: background-color 0.2s ease;
+}
+
+.register-btn:hover {
+    background-color: #1b8a34;
+}
+
+/* Form Footer redirect block section layout styles */
+.register-footer {
+    text-align: center;
+}
+
+.register-footer p {
+    font-size: 13px;
+    color: #333333;
+}
+
+.register-footer a {
+    color: #0256be; /* Link stays royal blue color code */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-footer a:hover {
+    text-decoration: underline;
+}
+
+/* main ui styling start here */
+
+/* Master Grid Layout setup */
+
+.dashboard-wrapper{
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    width: 100vw;
+    min-height: 100vh;
+}
+/* Sidebar Box Styling (Yeh layout ab bilkul fix rahega, scroll nahi hoga) */
+.sidebar {
+    background-color: #ffffff;
+    border-right: 1px solid #eaeaea;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Top layout aur bottom button alag columns partition boundary block */
+    height: 100vh; /* Fixed total device frame */
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.sidebar-top-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    padding-left: 8px;
+}
+
+.logo-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    width: 20px;
+}
+
+.logo-icon span {
+    height: 4px;
+    background-color: #111111;
+    border-radius: 2px;
+    width: 100%;
+}
+.logo-icon span:nth-child(2) { width: 85%; }
+.logo-icon span:nth-child(3) { width: 70%; }
+
+.brand-text { display: flex; flex-direction: column; }
+.brand-title { font-weight: 700; font-size: 15px; color: #111111; }
+.brand-subtitle { font-size: 11px; color: #888888; }
+
+.nav-menu { display: flex; flex-direction: column; gap: 8px; }
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: #666666;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.nav-item:hover { background-color: #f3f4f6; color: #111111; }
+.nav-item.active { background-color: #e3effc; color: #2563eb; font-weight: 600; }
+
+.icon-grid::before { content: "⊞"; font-size: 16px; }
+.icon-gear::before { content: "⚙"; font-size: 16px; }
+.icon-logout::before { content: "↱"; margin-right: 4px; }
+
+/* Fixed Bottom Container for Button inside Sidebar */
+.sidebar-fixed-bottom {
+    width: 100%;
+    padding-top: 16px;
+    background-color: #ffffff;
+}
+
+.add-transaction-btn {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+}
+
+.add-transaction-btn:hover {
+    background-color: #222222;
+}
+
+/* Right Core Main Panel (Sirf yeh part ab independently scroll hoga) */
+.main-layout {
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f5f7;
+    height: 100vh;
+    overflow-y: auto; /* Is line se sirf right panel me scrollbar active hoga */
+}
+
+.top-navbar {
+    background-color: #ffffff;
+    height: 65px;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 40px;
+    flex-shrink: 0; /* Header navbar scroll hone par dabega nahi layout settings parameter */
+}
+
+.user-profile { display: flex; align-items: center; gap: 16px; }
+.user-name { font-size: 14px; font-weight: 500; }
+
+.logout-btn {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 8px 14px;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Inner Body Panels Container layer */
+.content-body {
+    padding: 40px;
+    width: 100%;
+}
+
+.page-title { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
+.page-subtitle { font-size: 13px; color: #666666; margin-bottom: 24px; }
+
+/* 4 Top Cards Grid Layout view configs */
+.overview-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.card-item {
+    background-color: #ffffff;
+    border: 1px solid #eef0f3;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.card-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.blue-bg { background-color: #eff6ff; }
+.green-bg { background-color: #f0fdf4; }
+.red-bg { background-color: #fef2f2; }
+.dark-blue-bg { background-color: #f0f4ff; }
+
+.card-label { font-size: 12px; color: #666666; margin-bottom: 6px; }
+.card-value { font-size: 24px; font-weight: 700; }
+.green-text { color: #16a34a; }
+.red-text { color: #dc2626; }
+
+/* Mid Layout Section Splitting view panel boundaries */
+.mid-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.chart-container, .preferences-container, .transactions-container {
+    background-color: #ffffff;
+    border: 1px solid #eef0f3;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+h3 { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
+
+.chart-wrapper {
+    width: 100%;
+    height: 240px;
+    position: relative;
+}
+
+/* Preferences Area Toggle switches element wrapper styling layout controls */
+.pref-box {
+    border: 1px solid #f1f5f9;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.toggle-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle-group label { font-size: 14px; font-weight: 600; }
+
+.toggle-switch {
+    appearance: none;
+    width: 44px;
+    height: 24px;
+    background-color: #cbd5e1;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s;
+}
+
+.toggle-switch:checked { background-color: #3b82f6; }
+
+.toggle-switch::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.2s;
+}
+
+.toggle-switch:checked::before { transform: translateX(20px); }
+
+.reset-btn {
+    width: 100%;
+    background-color: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fee2e2;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Bottom Transactions Section Component block wrappers layouts */
+.table-filters {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    position: relative;
+    flex-grow: 1;
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #888888;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 12px 10px 36px;
+    font-size: 14px;
+    background-color: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    outline: none;
+}
+
+.select-wrapper { position: relative; width: 160px; }
+.select-wrapper select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    background-color: #fafafa;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    outline: none;
+    appearance: none;
+}
+
+.select-wrapper::after {
+    content: "▼";
+    font-size: 10px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #666666;
+}
+
+.table-wrapper { width: 100%; overflow-x: auto; }
+.transactions-table { width: 100%; border-collapse: collapse; text-align: left; }
+.transactions-table th {
+    font-size: 12px;
+    font-weight: 600;
+    color: #666666;
+    padding: 12px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+
+
+/* add transaction form styling here */
+
+
+/* Main Card Container Framework Styles */
+.tx-modal-container{
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 480px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 1000;
+
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eaeaea;
+}
+
+/* Top Header Title Parameters Layout Block */
+.tx-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.tx-modal-header h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111111;
+}
+
+/* Close button style overlay toggle layout properties link triggers */
+.tx-modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #888888;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.tx-modal-close-btn:hover {
+    color: #111111;
+}
+
+/* Core Forms Layout Groups Blocks Parameters Elements Styling */
+.tx-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* Dual split columns structural inline row parameters rules layout grid */
+.tx-form-grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.tx-form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #111111;
+    margin-bottom: 8px;
+}
+
+/* Text Controls Fields Input Values Style Configurations Parameters */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+input::placeholder {
+    color: #9ca3af;
+}
+
+/* Inputs element focus styling border glows states updates layout parameter */
+input:focus, select:focus {
+    border-color: #cbd5e1;
+    background-color: #ffffff;
+}
+
+/* Custom Dropdown Angle Chevron Caret System Layout Indicator */
+.tx-select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.tx-select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 36px;
+}
+
+/* Dropdown angle arrow indicator glyph positioning layers */
+.tx-select-wrapper::after {
+    content: "❯";
+    transform: rotate(90deg);
+    font-size: 10px;
+    color: #444444;
+    position: absolute;
+    right: 14px;
+    top: 38%;
+    pointer-events: none;
+}
+
+/* Action Execution Core Black Transaction Submit Button Block Settings */
+.tx-modal-submit-btn {
+    width: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.tx-modal-submit-btn:hover {
+    background-color: #222222;
+}
+
+body.dark .brand-title,
+body.dark .brand-subtitle,
+body.dark .nav-item,
+body.dark .logo-icon span {
+    color: white;
+}
+
+body.dark .logo-icon span {
+    background-color: white;
+}
+
+body.dark .nav-item {
+    color: #d1d5db;
+}
+
+body.dark .nav-item:hover {
+    background-color: #374151;
+    color: white;
+}
+
+body.dark .nav-item.active {
+    background-color: #4f46e5;
+    color: white;
+}
