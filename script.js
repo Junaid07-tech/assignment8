@@ -20,10 +20,10 @@ const resetBtn = document.querySelector(".reset-btn");
 const darkToggle = document.getElementById("darkModeToggle");
 
 const tableBody = document.querySelector(".transactions-table tbody");
-const cardValues = document.querySelectorAll(".card-value");
+const cardVal = document.querySelectorAll(".card-value");
 const userName = document.querySelector(".user-name");
 
-const searchInput = document.querySelector(".search-box input");
+const srcInput = document.querySelector(".search-box input");
 const typeFilter = document.getElementById("typeFilter");
 
 let users = JSON.parse(localStorage.getItem("users")) || [];
@@ -299,10 +299,10 @@ function updateCards() {
 
     let balance = income - expense;
 
-    cardValues[0].innerText = `$${balance}`;
-    cardValues[1].innerText = `$${income}`;
-    cardValues[2].innerText = `$${expense}`;
-    cardValues[3].innerText = transactions.length;
+    cardVal[0].innerText = `$${balance}`;
+    cardVal[1].innerText = `$${income}`;
+    cardVal[2].innerText = `$${expense}`;
+    cardVal[3].innerText = transactions.length;
 
 }
 
@@ -398,12 +398,12 @@ resetBtn.addEventListener("click", () => {
 
 // === SEARCH KE LIYE CODE ===
 
-searchInput.addEventListener("input", filterData);
+srcInput.addEventListener("input", filterData);
 typeFilter.addEventListener("change", filterData);
 
 function filterData() {
 
-    let search = searchInput.value.toLowerCase();
+    let search = srcInput.value.toLowerCase();
     let type = typeFilter.value;
 
     let filtered = transactions.filter(t => {

@@ -9,83 +9,80 @@
 </head>
 <body>
     
-    <!-- Main Login Card Container -->
+    <!-- login form yhaa se shuru hai -->
     <div class="login-card" id="">
         
-        <!-- Header Text -->
         <div class="login-header">
             <h1>Welcome Back</h1>
             <p>Login to FinTrack Pro</p>
         </div>
 
-        <!-- Login Form Fields -->
         <form id="loginForm">
-            
-            <!-- Username Input Group -->
+        
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="loginUsername" name="username" required autocomplete="username">
             </div>
 
-            <!-- Password Input Group -->
+           
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password"id="loginPassword" name="password" required autocomplete="current-password">
             </div>
 
-            <!-- Login Action Button -->
+            
             <button type="submit" class="login-btn">Login</button>
 
         </form>
 
-        <!-- Footer Link Block -->
+        
         <div class="login-footer">
             <p>Don't have an account? <a href="#" id="registerLink">Register here</a></p>
         </div>
 
     </div>
 
-    <!-- Main Registration Card Container -->
+    <!-- Registration form yha se shuru hai -->
     <div class="register-card" style="display: none;">
         
-        <!-- Header Text -->
+        
         <div class="register-header">
             <h1>Create Account</h1>
             <p>Join FinTrack Pro</p>
         </div>
 
-        <!-- Registration Form Fields -->
+       
         <form id="registerForm">
             
-            <!-- Choose Username Input Group -->
+            
             <div class="form-group">
                 <label for="username">Choose a Username</label>
                 <input type="text"id="registerUsername" name="username" required autocomplete="username">
             </div>
 
-            <!-- Password Input Group -->
+            
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" id="registerPassword" name="password" required autocomplete="new-password">
             </div>
 
-            <!-- Register Action Button -->
+            
             <button type="submit" class="register-btn">Register</button>
 
         </form>
 
-        <!-- Footer Link Block -->
+        
         <div class="register-footer">
             <p>Already have an account? <a href="#" id="loginLink">Login here</a></p>
         </div>
 
     </div>
 
-    <!--main ui start here-->
+    
 
     <div class="dashboard-wrapper"  style="display: none;">
         
-        <!-- Sidebar Section -->
+        
         <aside class="sidebar">
             <div class="brand">
                 <div class="logo-icon">
@@ -108,13 +105,13 @@
             <button class="add-transaction-btn">+ Add Transaction</button>
         </aside>
 
-        <!-- Main Content Area -->
+        <!-- Main Content yhaa se shuru hai dashboard wala part-->
         <div class="main-layout">
             
-            <!-- Top Navbar Header -->
+            
             <header class="top-navbar">
                 <div class="user-profile">
-                    <!-- Junaid name remove karke khali span diya hai -->
+                    
                     <span class="user-name"></span>
                     <button class="logout-btn">
                         <span class="icon-logout"></span> Logout
@@ -122,34 +119,34 @@
                 </div>
             </header>
 
-            <!-- Main Dashboard Body -->
+           
             <main class="content-body">
-                  <!-- SETTINGS PAGE -->
+                  
     
                 <h1 class="page-title">Financial Overview</h1>
                 <p class="page-subtitle">Real-time tracking application</p>
 
-                <!-- 4 Top Cards (Current Balance, Income, Expense, Transactions) -->
+                
                 <div class="overview-cards">
-                    <!-- Current Balance -->
+                    
                     <div class="card-item">
                         <div class="card-icon blue-bg">🏛</div>
                         <p class="card-label">Current Balance</p>
                         <h2 class="card-value">$0.00</h2>
                     </div>
-                    <!-- Total Income -->
+                   
                     <div class="card-item">
                         <div class="card-icon green-bg">📈</div>
                         <p class="card-label">Total Income</p>
                         <h2 class="card-value green-text">$0.00</h2>
                     </div>
-                    <!-- Total Expense -->
+                    
                     <div class="card-item">
                         <div class="card-icon red-bg">📉</div>
                         <p class="card-label">Total Expense</p>
                         <h2 class="card-value red-text">$0.00</h2>
                     </div>
-                    <!-- Total Transactions -->
+                    
                     <div class="card-item">
                         <div class="card-icon dark-blue-bg">💼</div>
                         <p class="card-label">Total Transactions</p>
@@ -157,9 +154,9 @@
                     </div>
                 </div>
 
-                <!-- Mid Section (Chart + Preferences) -->
+               
                 <div class="mid-section">
-                    <!-- Cash Flow Analysis (Chart) -->
+                    <!-- (Chart) -->
                     <div class="chart-container">
                         <h3>Cash Flow Analysis</h3>
                         <div class="chart-wrapper">
@@ -167,7 +164,7 @@
                         </div>
                     </div>
 
-                    <!-- Preferences Section -->
+                    
                     <div class="preferences-container">
                         <h3>Preferences</h3>
                         <div class="pref-box">
@@ -180,7 +177,7 @@
                     </div>
                 </div>
 
-                <!-- Bottom Section (All Transactions List Placeholder) -->
+                
                 <div class="transactions-container">
                     <h3>All Transactions</h3>
                     
@@ -198,7 +195,7 @@
                         </div>
                     </div>
                    
-                    <!-- Table Headers Structure -->
+                    
                     <div class="table-wrapper">
                         <table class="transactions-table">
                             <thead>
@@ -211,7 +208,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- Data rows can be added here dynamically through JS DOM -->
+                               
                             </tbody>
                         </table>
                     </div>

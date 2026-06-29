@@ -11,7 +11,10 @@ body{
     font-family: system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
     'Open Sans', 'Helvetica Neue', sans-serif;
-}/* ================= DARK MODE ================= */
+}
+
+
+/* === DARK MODE  KI STYLING YHA SE HAI=== */
 
 body.dark {
     background: #111827;
@@ -35,7 +38,7 @@ body.dark .register-card {
     border-color: #374151;
 }
 
-/* text */
+
 body.dark .brand-title,
 body.dark .brand-subtitle,
 body.dark .page-title,
@@ -54,7 +57,7 @@ body.dark .nav-item {
     color: #d1d5db;
 }
 
-/* sidebar hover */
+
 body.dark .nav-item:hover {
     background: #374151;
     color: #fff;
@@ -65,7 +68,7 @@ body.dark .nav-item.active {
     color: white;
 }
 
-/* inputs */
+
 body.dark input,
 body.dark select {
     background: #374151;
@@ -73,7 +76,7 @@ body.dark select {
     border-color: #4b5563;
 }
 
-/* ================= TOGGLE SWITCH FIX ================= */
+
 
 .toggle-switch {
     appearance: none;
@@ -109,7 +112,7 @@ body.dark select {
     transform: translateX(20px);
 }
 
-/* dark mode toggle color fix */
+/
 body.dark .toggle-switch {
     background-color: #4b5563;
 }
@@ -151,18 +154,18 @@ body.dark .search-box input{
 body.dark .tx-modal-close-btn{
     color: white;
 }
-/* White Form Container Box */
+
 .login-card {
     background-color: #ffffff;
     width: 100%;
     max-width: 440px;
     border-radius: 12px;
     padding: 40px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Clean light shadow overlay wrapper */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
     border: 1px solid #eaeaea;
 }
 
-/* Header Sections Styling blocks */
+
 .login-header {
     text-align: center;
     margin-bottom: 28px;
@@ -188,7 +191,7 @@ body.dark .tx-modal-close-btn{
     color: #444444;
 }
 
-/* Forms Labels and Input Rows controls styles */
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -202,7 +205,7 @@ body.dark .tx-modal-close-btn{
     margin-bottom: 6px;
 }
 
-/* Form Inputs parameters styling configurations */
+
 input[type="text"],
 input[type="password"] {
     width: 100%;
@@ -217,13 +220,13 @@ input[type="password"] {
 }
 
 input:focus {
-    border-color: #2563eb; /* Focused blue state configuration frame parameter */
+    border-color: #2563eb; 
 }
 
-/* Blue Action Control Login execution button styling */
+
 .login-btn {
     width: 100%;
-    background-color: #0256be; /* Matched dark royal blue color code */
+    background-color: #0256be;
     color: #ffffff;
     border: none;
     padding: 12px;
@@ -240,7 +243,7 @@ input:focus {
     background-color: #014397;
 }
 
-/* Form Footer redirect block section layout styles */
+
 .login-footer {
     text-align: center;
 }
@@ -260,18 +263,18 @@ input:focus {
     text-decoration: underline;
 }
 
-/* White Form Container Box */
+
 .register-card {
     background-color: #ffffff;
     width: 100%;
     max-width: 440px;
     border-radius: 12px;
     padding: 40px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Clean light shadow overlay wrapper */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); 
     border: 1px solid #eaeaea;
 }
 
-/* Header Sections Styling blocks */
+
 .register-header {
     text-align: center;
     margin-bottom: 28px;
@@ -289,7 +292,7 @@ input:focus {
     color: #444444;
 }
 
-/* Forms Labels and Input Rows controls styles */
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -303,7 +306,7 @@ input:focus {
     margin-bottom: 6px;
 }
 
-/* Form Inputs parameters styling configurations */
+
 input[type="text"],
 input[type="password"] {
     width: 100%;
@@ -318,13 +321,12 @@ input[type="password"] {
 }
 
 input:focus {
-    border-color: #22c55e; /* Focused green state configuration frame parameter */
+    border-color: #22c55e;
 }
 
-/* Green Action Control Register execution button styling */
 .register-btn {
     width: 100%;
-    background-color: #22a842; /* Matched green color code from screen image */
+    background-color: #22a842; 
     color: #ffffff;
     border: none;
     padding: 12px;
@@ -341,7 +343,7 @@ input:focus {
     background-color: #1b8a34;
 }
 
-/* Form Footer redirect block section layout styles */
+
 .register-footer {
     text-align: center;
 }
@@ -352,7 +354,7 @@ input:focus {
 }
 
 .register-footer a {
-    color: #0256be; /* Link stays royal blue color code */
+    color: #0256be;
     text-decoration: none;
     font-weight: 500;
 }
@@ -361,9 +363,6 @@ input:focus {
     text-decoration: underline;
 }
 
-/* main ui styling start here */
-
-/* Master Grid Layout setup */
 
 .dashboard-wrapper{
     display: grid;
@@ -371,15 +370,15 @@ input:focus {
     width: 100vw;
     min-height: 100vh;
 }
-/* Sidebar Box Styling (Yeh layout ab bilkul fix rahega, scroll nahi hoga) */
+
 .sidebar {
     background-color: #ffffff;
     border-right: 1px solid #eaeaea;
     padding: 24px 16px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Top layout aur bottom button alag columns partition boundary block */
-    height: 100vh; /* Fixed total device frame */
+    justify-content: space-between; 
+    height: 100vh;
     position: sticky;
     top: 0;
     left: 0;
@@ -442,7 +441,7 @@ input:focus {
 .icon-gear::before { content: "⚙"; font-size: 16px; }
 .icon-logout::before { content: "↱"; margin-right: 4px; }
 
-/* Fixed Bottom Container for Button inside Sidebar */
+
 .sidebar-fixed-bottom {
     width: 100%;
     padding-top: 16px;
@@ -465,13 +464,13 @@ input:focus {
     background-color: #222222;
 }
 
-/* Right Core Main Panel (Sirf yeh part ab independently scroll hoga) */
+/
 .main-layout {
     display: flex;
     flex-direction: column;
     background-color: #f4f5f7;
     height: 100vh;
-    overflow-y: auto; /* Is line se sirf right panel me scrollbar active hoga */
+    overflow-y: auto;
 }
 
 .top-navbar {
@@ -482,7 +481,7 @@ input:focus {
     justify-content: flex-end;
     align-items: center;
     padding: 0 40px;
-    flex-shrink: 0; /* Header navbar scroll hone par dabega nahi layout settings parameter */
+    flex-shrink: 0;
 }
 
 .user-profile { display: flex; align-items: center; gap: 16px; }
@@ -499,7 +498,7 @@ input:focus {
     align-items: center;
 }
 
-/* Inner Body Panels Container layer */
+
 .content-body {
     padding: 40px;
     width: 100%;
@@ -508,7 +507,7 @@ input:focus {
 .page-title { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
 .page-subtitle { font-size: 13px; color: #666666; margin-bottom: 24px; }
 
-/* 4 Top Cards Grid Layout view configs */
+
 .overview-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -544,7 +543,7 @@ input:focus {
 .green-text { color: #16a34a; }
 .red-text { color: #dc2626; }
 
-/* Mid Layout Section Splitting view panel boundaries */
+
 .mid-section {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -567,7 +566,7 @@ h3 { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
     position: relative;
 }
 
-/* Preferences Area Toggle switches element wrapper styling layout controls */
+
 .pref-box {
     border: 1px solid #f1f5f9;
     border-radius: 8px;
@@ -625,7 +624,7 @@ h3 { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
     cursor: pointer;
 }
 
-/* Bottom Transactions Section Component block wrappers layouts */
+
 .table-filters {
     display: flex;
     gap: 16px;
@@ -691,10 +690,6 @@ h3 { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
 
 
 
-/* add transaction form styling here */
-
-
-/* Main Card Container Framework Styles */
 .tx-modal-container{
     background-color: #ffffff;
     width: 100%;
@@ -713,7 +708,7 @@ h3 { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
     border: 1px solid #eaeaea;
 }
 
-/* Top Header Title Parameters Layout Block */
+
 .tx-modal-header {
     display: flex;
     justify-content: space-between;
@@ -727,7 +722,6 @@ h3 { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
     color: #111111;
 }
 
-/* Close button style overlay toggle layout properties link triggers */
 .tx-modal-close-btn {
     background: none;
     border: none;
@@ -742,14 +736,13 @@ h3 { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
     color: #111111;
 }
 
-/* Core Forms Layout Groups Blocks Parameters Elements Styling */
+
 .tx-form-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
-/* Dual split columns structural inline row parameters rules layout grid */
 .tx-form-grid-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -763,7 +756,6 @@ h3 { font-size: 18px; font-weight: 700; margin-bottom: 20px; }
     margin-bottom: 8px;
 }
 
-/* Text Controls Fields Input Values Style Configurations Parameters */
 input[type="text"],
 input[type="number"],
 input[type="date"],
@@ -783,13 +775,13 @@ input::placeholder {
     color: #9ca3af;
 }
 
-/* Inputs element focus styling border glows states updates layout parameter */
+
 input:focus, select:focus {
     border-color: #cbd5e1;
     background-color: #ffffff;
 }
 
-/* Custom Dropdown Angle Chevron Caret System Layout Indicator */
+
 .tx-select-wrapper {
     position: relative;
     width: 100%;
@@ -802,7 +794,7 @@ input:focus, select:focus {
     padding-right: 36px;
 }
 
-/* Dropdown angle arrow indicator glyph positioning layers */
+
 .tx-select-wrapper::after {
     content: "❯";
     transform: rotate(90deg);
@@ -814,7 +806,7 @@ input:focus, select:focus {
     pointer-events: none;
 }
 
-/* Action Execution Core Black Transaction Submit Button Block Settings */
+
 .tx-modal-submit-btn {
     width: 100%;
     background-color: #000000;
